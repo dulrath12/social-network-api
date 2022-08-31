@@ -4,7 +4,7 @@ const { getThought, getOneThought, createThought, updateThought, deleteThought, 
 
 router.route('/').get(getThought).post(createThought)
 
-router.router('/:thoughtId').get(getOneThought).put(updateThought).delete(deleteThought)
+router.route('/:thoughtId').get(getOneThought).put(updateThought).delete(deleteThought)
 
 router.route('/:thoughtId/reactions').post(createReaction)
 
