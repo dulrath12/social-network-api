@@ -47,8 +47,9 @@ const thoughtSchema = new Schema (
                 moment(createdAtVal).format("MM DD, YYYY [at] hh:mm a")
         },
         username: {
-            type: String,
+            type: Schema.Types.ObjectId,
             required: true,
+            ref: 'User'
         },
         reactions: [reactionSchema]
     },
